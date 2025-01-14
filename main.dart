@@ -43,22 +43,25 @@ void main1() async{
 
 
 void main() {
-  final directory = Directory('fayllar');
-
-  // Loop through each file in the directory
-  for (var entity in directory.listSync()) {
-    if (entity is File) {
-      // Check if it's a file
-      try {
-        // Read the contents of the file
-        String contents = entity.readAsStringSync();
-        print('Contents of ${entity.path}:');
-        print(contents);
-      } catch (e) {
-        print('Error reading file ${entity.path}: $e');
-      }
-    }
-  }
+  make_human(2, 120, 'doctor');
 }
 
 
+class Human {
+  Human({
+    required this.age,
+    required this.height,
+    required this.profession
+    });
+
+    int age;
+    int height;
+    String profession;
+    String level = '0';
+}
+
+void make_human(age, height, profession) {
+  var Vova = Human(age: age, height: height, profession: profession);
+  print(Vova.age);
+
+}
