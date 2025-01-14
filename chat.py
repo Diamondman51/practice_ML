@@ -79,14 +79,13 @@ def get_answer(query):
     # vektor ko'rishdagi raqamlarni solishtirish
 
     docs = docsearch2.similarity_search(query)
-    # print('\n\nDocs: ', docs)
+    print('\n\nDocs: ', docs)
     result = chain.invoke({"input_documents": docs, "question": query + '\nотвечай только на русском языке'}, return_only_outputs=True)
-    # # print("\n\n", result)
+    # print("\n\n", result)
     return result['output_text']
 
 while True:
-    query = input('\n\nSavol: ')
+    query = input('\n\nВопрос: ')
     res = get_answer(query)
     # # os.system('cls')
-    print('\n\nAnswer: ', res)
-
+    print('\n\nОтвет: ', res)

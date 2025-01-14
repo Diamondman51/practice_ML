@@ -47,16 +47,18 @@
 #     sys.exit(app.exec())
 
 
-import os
+# import os
 
 
-os.environ['LANGCHAIN_TRACING_V2']='True'
-os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
-os.environ['LANGCHAIN_API_KEY']="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"
-os.environ['LANGCHAIN_PROJECT']="pr-notable-descent-17"
+# os.environ['LANGCHAIN_TRACING_V2']='True'
+# os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
+# os.environ['LANGCHAIN_API_KEY']="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"
+# os.environ['LANGCHAIN_PROJECT']="pr-notable-descent-17"
 
 
-
+print(ord('🥎'))
+for i in range(129358, 130390):
+    print(chr(i), type(chr(i)), i)
 
 # import openai
 # from langsmith.wrappers import wrap_openai
